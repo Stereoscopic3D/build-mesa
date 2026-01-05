@@ -231,7 +231,7 @@ rd /s /q mesa-%MESA_VERSION% 1>nul 2>nul
 REM call :get "https://archive.mesa3d.org/mesa-%MESA_VERSION%.tar.xz" "mesa-%MESA_VERSION%" "%MESA_SHA256%" || exit /b 1
 
 git clone https://gitlab.freedesktop.org/mesa/mesa.git mesa-%MESA_VERSION%
-git -C mesa-%MESA_VERSION% checkout 9a8daeb38bdcae88e32882979c37af50d4e02f08
+git -C mesa-%MESA_VERSION% checkout 1f44a470b416a2074ed6118e4e86297215409df5
 
 git.exe apply --directory=mesa-%MESA_VERSION% patches/mesa-require-dxheaders.patch    || exit /b 1
 git.exe apply --directory=mesa-%MESA_VERSION% patches/gallium-use-tex-cache.patch     || exit /b 1
